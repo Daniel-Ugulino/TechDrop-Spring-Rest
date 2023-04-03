@@ -1,0 +1,32 @@
+[
+  {
+    "nome": "Daniel",
+    "sobrenome": "Fonseca",
+    "email": "teste@gmail.com",
+    "cpf": "123456789-12",
+    "nascimento": "02/09/2002",
+    "cep": "23860-000",
+    "telefone": "(21)982302376",
+    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/default.png"
+  },
+  {
+    "nome": "German",
+    "sobrenome": "Cano",
+    "email": "cano@gmail.com",
+    "cpf": "123456789-12",
+    "nascimento": "01/01/2001",
+    "cep": "23860-000",
+    "telefone": "(21)12245678",
+    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/default.png"
+  },
+  {
+    "nome": "Wagner",
+    "sobrenome": "Leao",
+    "email": "leao@gmail.com",
+    "cpf": "123456789-12",
+    "nascimento": "05/12/2011",
+    "cep": "23860-000",
+    "telefone": "(21)12245678",
+    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/default.png"
+  }
+]

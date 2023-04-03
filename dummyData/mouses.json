@@ -1,0 +1,51 @@
+[
+  {
+    "marca": "Hyper-X",
+    "modelo": "Pulsefire",
+    "quantidade": 10,
+    "valor": 139.99,
+    "bluetooh_cable": "cable",
+    "iluminacao": true,
+    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/default.png",
+    "dpi" : 16000,
+    "qtd_botoes": 6,
+    "peso": 195
+  },
+  {
+    "marca": "Redragon",
+    "modelo": "Cobra",
+    "quantidade": 10,
+    "valor": 107.99,
+    "bluetooh_cable": "cable",
+    "iluminacao": true,
+    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/default.png",
+    "dpi" : 12400,
+    "qtd_botoes": 7,
+    "peso": 210
+  },
+  {
+    "marca": "Logitech ",
+    "modelo": "G403 HERO",
+    "quantidade": 8,
+    "valor": 199.99,
+    "bluetooh_cable": "cable",
+    "iluminacao": true,
+    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/default.png",
+    "dpi" : 16000,
+    "qtd_botoes": 6,
+    "peso": 190
+  },
+  {
+    "marca": "Razer",
+    "modelo": "Deathadder V2 Chroma",
+    "quantidade": 10,
+    "valor": 319.90,
+    "bluetooh_cable": "cable",
+    "iluminacao": true,
+    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/default.png",
+    "dpi" : 20000,
+    "qtd_botoes": 8,
+    "peso": 234
+  }
+
+]

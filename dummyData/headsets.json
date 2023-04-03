@@ -1,0 +1,43 @@
+[
+  {
+    "marca": "Redragon",
+    "modelo": "Zeus X Chroma Mk.II",
+    "quantidade": 10,
+    "valor": 319.99,
+    "bluetooh_cable": "cable",
+    "iluminacao": true,
+    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/default.png",
+    "som":"STEREO",
+    "frequencia":"50Hz até 20000Hz",
+    "sensibilidade": "98 ± 3dB S.P.L. at 1KHz",
+    "cancelamentoRuido" : true
+
+  },
+  {
+    "marca": "Hyper-X",
+    "modelo": "Cloud Stinger",
+    "quantidade": 10,
+    "valor": 499.99,
+    "bluetooh_cable": "bluetooh",
+    "iluminacao": false,
+    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/default.png",
+    "som":"STEREO",
+    "frequencia":"20Hz–20.000Hz",
+    "sensibilidade": "99dBSPL/mW a 1kHz",
+    "cancelamentoRuido" : true
+  }
+,
+  {
+    "marca": "Logitec",
+    "modelo": "G432",
+    "quantidade": 10,
+    "valor": 299.99,
+    "bluetooh_cable": "cable",
+    "iluminacao": false,
+    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/default.png",
+    "som":"SURROUND",
+    "frequencia":"20 kHz",
+    "sensibilidade": "107 dB SPL/mW",
+    "cancelamentoRuido" : true
+  }
+]
