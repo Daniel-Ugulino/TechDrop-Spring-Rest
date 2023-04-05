@@ -2,6 +2,7 @@ package br.edu.infnet.TechStore.model.service;
 
 import br.edu.infnet.TechStore.model.domain.Headset;
 import br.edu.infnet.TechStore.model.domain.Mouse;
+import br.edu.infnet.TechStore.model.domain.Teclado;
 import br.edu.infnet.TechStore.model.repository.MouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -51,6 +52,20 @@ public class MouseService{
         }
 
         mouseRepository.save(mouse);
+    }
+
+    public void enviar_img(Integer id ,MultipartFile multipartFile){
+        Mouse mouseDB = mouseRepository.findById(id).get();
+
+        String path = s3fileService.getFilePath(multipartFile,bucket_folder,mouseDB.getMarca(),mouseDB.getModelo());
+
+        String s3FileUrl = s3fileService.uploadFile(path, multipartFile);
+
+        mouseDB.setImgUrl(s3FileUrl);
+
+        System.out.println(s3FileUrl);
+
+        mouseRepository.save(mouseDB);
     }
 
 

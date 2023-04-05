@@ -55,6 +55,18 @@ public class ClienteService {
         clienteRepository.save(clienteDB);
     }
 
+    public void enviar_img(Integer id ,MultipartFile multipartFile){
+        Cliente clienteDB = clienteRepository.findById(id).get();
+
+        String path = s3fileService.getFilePath(multipartFile,bucket_folder,clienteDB.getNome(),clienteDB.getSobrenome());
+
+        String s3FileUrl = s3fileService.uploadFile(path, multipartFile);
+
+        clienteDB.setImgUrl(s3FileUrl);
+
+        clienteRepository.save(clienteDB);
+    }
+
     public Collection<Cliente> obterLista(){
 
         return clienteRepository.findAll(Sort.by(Sort.Direction.ASC, "nome"));

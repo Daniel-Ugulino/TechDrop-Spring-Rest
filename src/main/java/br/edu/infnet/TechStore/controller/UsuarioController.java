@@ -1,5 +1,4 @@
 package br.edu.infnet.TechStore.controller;
-
 import br.edu.infnet.TechStore.model.domain.Usuario;
 import br.edu.infnet.TechStore.model.dtos.usuarioDto;
 import br.edu.infnet.TechStore.model.service.UsuarioService;
@@ -9,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
-
 import java.util.Collection;
 
 @RestController

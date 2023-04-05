@@ -1,19 +1,19 @@
 [
   {
     "marca": "HyperX",
-    "modelo": "Alloy MKW100",
+    "modelo": "Alloy_MKW100",
     "quantidade": 10,
     "valor": 209.99,
     "bluetooh_cable": "cable",
     "iluminacao": true,
-    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/default.png",
+    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/techdrop_cliente/tdgfhgfh_fghghf_1680488886253.png",
     "tipo": "MECANICO",
     "switch_type" : "RED",
     "ghosting": "FULL"
   },
   {
     "marca": "Redragon",
-    "modelo": "Surara Pro",
+    "modelo": "Surara_Pro",
     "quantidade": 10,
     "valor":  299.99,
     "bluetooh_cable": "cable",
@@ -31,7 +31,7 @@
     "valor": 299.99,
     "bluetooh_cable": "bluetooh",
     "iluminacao": false,
-    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/default.png",
+    "imgUrl": "https://techdrop-bucket.s3.amazonaws.com/techdrop_headset/tesssd_gdfgdfgd_1679080689113.jpg",
     "tipo": "MEMBRANA",
     "switch_type" : "NENHUM",
     "ghosting": "FULL"

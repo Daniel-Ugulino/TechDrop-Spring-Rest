@@ -23,7 +23,7 @@ public class TecladoService {
             String path = s3fileService.getFilePath(multipartFile,bucket_folder,teclado.getMarca(),teclado.getModelo());
             String s3FileUrl = s3fileService.uploadFile(path, multipartFile);
             teclado.setImgUrl(s3FileUrl);
-        }else {
+        }else if(teclado.getImgUrl() == null){
             teclado.setImgUrl("https://techdrop-bucket.s3.amazonaws.com/default.png");
         }
 
@@ -51,6 +51,18 @@ public class TecladoService {
         }
 
         tecladoRepository.save(teclado);
+    }
+
+    public void enviar_img(Integer id ,MultipartFile multipartFile){
+        Teclado tecladoDB = tecladoRepository.findById(id).get();
+
+        String path = s3fileService.getFilePath(multipartFile,bucket_folder,tecladoDB.getMarca(),tecladoDB.getModelo());
+
+        String s3FileUrl = s3fileService.uploadFile(path, multipartFile);
+
+        tecladoDB.setImgUrl(s3FileUrl);
+
+        tecladoRepository.save(tecladoDB);
     }
 
     public Collection<Teclado> obterLista(){

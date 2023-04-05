@@ -1,13 +1,11 @@
-/*
 package br.edu.infnet.TechStore.controller;
 
 import br.edu.infnet.TechStore.model.domain.Usuario;
 import br.edu.infnet.TechStore.model.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.support.SessionStatus;
 
 import javax.servlet.http.HttpSession;
 
@@ -18,9 +16,8 @@ public class AcessoController {
 	@Autowired
 	UsuarioService usuarioService;
 
-	
 	@PostMapping()
-	public String login(Model model,@RequestParam String email, @RequestParam String senha) {
+	public ResponseEntity<Object> login(@RequestParam String email, @RequestParam String senha) {
 
 		try {
 			Usuario user = new Usuario(email, senha);
@@ -28,29 +25,19 @@ public class AcessoController {
 			user = usuarioService.autenticar(user);
 
 			if(user != null) {
-				model.addAttribute("usuario", user);
-				System.out.println(user.getPermission().toString());
-				return "redirect:/home";
+				return ResponseEntity.status(HttpStatus.CREATED).body("Usuario logado");
 			}
 
-			model.addAttribute("msg", "Login Invalido");
 		} catch (Exception e){
-			System.out.println(e);
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Erro ao logar");
 		}
 
-		return null;
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Erro ao logar");
 	}
 
-	@GetMapping(value = "/logout")
-	public String logout(HttpSession session, SessionStatus status) {
-
-		try {
-			status.setComplete();
-			session.removeAttribute("usuario");
-		} catch (Exception e){
-			System.out.println(e);
-		}
-		return "redirect:/login";
+	@DeleteMapping(value = "/logout")
+	public ResponseEntity<Object> logout(@RequestParam String email) {
+		return ResponseEntity.status(HttpStatus.CREATED).body("Usuario deslogado");
 	}
+
 }
-*/

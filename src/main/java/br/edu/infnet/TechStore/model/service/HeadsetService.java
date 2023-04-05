@@ -3,6 +3,7 @@ package br.edu.infnet.TechStore.model.service;
 import br.edu.infnet.TechStore.model.domain.Cliente;
 import br.edu.infnet.TechStore.model.domain.Headset;
 import br.edu.infnet.TechStore.model.domain.Mouse;
+import br.edu.infnet.TechStore.model.domain.Teclado;
 import br.edu.infnet.TechStore.model.repository.HeadsetRepository;
 import br.edu.infnet.TechStore.model.repository.MouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +55,18 @@ public class HeadsetService {
         }
 
         headsetRepository.save(headset);
+    }
+
+    public void enviar_img(Integer id ,MultipartFile multipartFile){
+        Headset headsetDB = headsetRepository.findById(id).get();
+
+        String path = s3fileService.getFilePath(multipartFile,bucket_folder,headsetDB.getMarca(),headsetDB.getModelo());
+
+        String s3FileUrl = s3fileService.uploadFile(path, multipartFile);
+
+        headsetDB.setImgUrl(s3FileUrl);
+
+        headsetRepository.save(headsetDB);
     }
 
     public Collection<Headset> obterLista(){
